@@ -32,10 +32,11 @@ class _MainScreenState extends State<MainScreen> {
     final loadViewNode = _stateReference.child('LOADVIEW');
     loadViewNode.onValue.listen((event) { 
       setState(() {
-        if (_load == event.snapshot.value){
-          _onTransaction = false;
-        }
         _load = event.snapshot.value;
+        
+        setState(() {
+          _onTransaction = false;
+        });
         if (_timer != null && _timer.isActive){
           _timer.cancel();
         }
@@ -53,11 +54,13 @@ class _MainScreenState extends State<MainScreen> {
       return mutableData;
     });
 
-
     if (_timer != null && _timer.isActive){
       _timer.cancel();
     }
     _timer = Timer.periodic(Duration(seconds: 5), (timer){ 
+      setState(() {
+        _onTransaction = false;
+      });
       final loadViewNode = _stateReference.child('LOADVIEW');
       loadViewNode.once().then((v){
         final loadViewValue = v.value;
@@ -69,7 +72,6 @@ class _MainScreenState extends State<MainScreen> {
           }).then((value){
             setState(() {
               _load = loadViewValue;
-              _onTransaction = false;
             });
             showDialog(
               context: context,
