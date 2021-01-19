@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "464535171463",
+    "firebase_url": "https://mqtt-sim800.firebaseio.com",
+    "project_id": "mqtt-sim800",
+    "storage_bucket": "mqtt-sim800.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:464535171463:android:4da9ddae3fbcb2c5b7a322",
+        "android_client_info": {
+          "package_name": "com.example.alcwireless"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "464535171463-7ih08oi8rfg5iir2p909shdj3e80ogl7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC5F6ZIoKPu7NJ1suBuUECMh73WHR3T-sw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "464535171463-7ih08oi8rfg5iir2p909shdj3e80ogl7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
